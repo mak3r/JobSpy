@@ -28,9 +28,9 @@ jobs:
           
       - name: Create GitHub Release
         uses: actions/create-release@v1.1.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with: 
-          files: dist/*
-          token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           
