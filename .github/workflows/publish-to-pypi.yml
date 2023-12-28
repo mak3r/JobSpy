@@ -31,7 +31,7 @@ jobs:
           path: dist
           
       - name: Output artifact ID
-        run:  echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
+        run:  echo 'Artifact ID is ${{ steps.Upload_Artifacts.outputs.artifact-id }}'
 
 #      - name: Upload Release Asset
 #        id: upload-release-asset
