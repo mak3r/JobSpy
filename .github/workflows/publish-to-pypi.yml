@@ -25,6 +25,12 @@ jobs:
           python3 -m
           poetry
           build
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with: 
+          name: Distribution Assets
+          path: dist
           
       - name: Create GitHub Release
         uses: actions/create-release@v1.1.4
