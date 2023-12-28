@@ -15,14 +15,12 @@ jobs:
 
       - name: Install poetry
         run: >-
-          python3 -m
           pip install
           poetry
           --user
 
       - name: Build distribution 📦
         run: >-
-          python3 -m
           poetry
           build
 
