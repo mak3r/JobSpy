@@ -26,12 +26,13 @@ jobs:
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
+        id: artifact-upload-step
         with: 
           name: Distribution Assets
           path: dist
           
       - name: Output artifact ID
-        run:  echo 'Artifact ID is ${{ steps.Upload_Artifacts.outputs.artifact-id }}'
+        run:  echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
 
 #      - name: Upload Release Asset
 #        id: upload-release-asset
